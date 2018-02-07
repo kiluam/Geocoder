@@ -1,0 +1,25 @@
+<!doctype html>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+<center>
+<h1> The following are the co-ordinates corresponding to the test set addresses </h1>
+<table>
+  <tr>
+    {% for key in vars %}
+    <th> {{ key|safe }} </th>
+    {% endfor %}
+    {% for i in range(vars['Town']|length) %}
+    <tr>
+    {% for key in vars %}
+    <td>{{vars[key][i]|safe}}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+  <center>
+     
+
+
+
+
+
+
